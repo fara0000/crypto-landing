@@ -12,8 +12,7 @@ const Home: NextPage = () => (
         </Head>
 
         <Button
-            // height={}
-            theme='black'
+            theme='accent'
             size='s'
             rounded
         >
@@ -23,19 +22,25 @@ const Home: NextPage = () => (
             <ArrowRightIcon />
         </Button>
 
-        <Typography>
+        <Typography tag="h1">
             Hello h1
         </Typography>
-        <Typography>
+        <Typography tag="h2">
             Hello h2
         </Typography>
-        <Typography>
+        <Typography tag="h3">
             Hello h3
         </Typography>
-        <Typography>
+        <Typography tag="h4">
+            Hello h4
+        </Typography>
+        <Typography tag="h5">
+            Hello h5
+        </Typography>
+        <Typography tag="p">
             Hello p
         </Typography>
-        <Typography>
+        <Typography tag="span">
             Hello span
         </Typography>
     </React.Fragment>

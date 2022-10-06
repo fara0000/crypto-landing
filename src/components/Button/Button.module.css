@@ -15,21 +15,21 @@ button.accent {
     width: var(--width);
     height: var(--height);
     color: var(--dark-primary);
-    background-color: #05EBFF;
+    background-color: var(--accent);
 }
 
 button.white {
     width: var(--width);
     height: var(--height);
     color: var(--dark-primary);
-    background-color: #FFFFFF;
+    background-color: var(--light-primary);
 }
 
 button.black {
     width: var(--width);
     height: var(--height);
-    color: #FFFFFF;
-    background-color: black;
+    color: var(--light-primary);
+    background-color: var(--dark-primary);
 }
 
 .s {

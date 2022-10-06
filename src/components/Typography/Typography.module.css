@@ -1,34 +1,37 @@
 .typography {
-    font-family: 'NeoGram', serif;
-    --lineHeight: 1.25;
     --color: inherit;
+    margin: 0;
     font-size: 18px;
+    font-family: 'NeoGram', serif;
     line-height: 140%;
     color: var(--color);
     font-weight: 400;
 }
 
 .h1 {
-    --size: 78px;
-    --weight: bold;
+    font-weight: 900;
+    font-size: 125px;
+    line-height: 91%;
 }
 
 .h2 {
-    --size: 36px;
-    --weight: medium;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 91%;
 }
 
 .h3 {
-    --size: 22px;
-    --weight: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
 }
 
 .h4 {
-    --size: 22px;
-    --weight: normal;
+    font-weight: 800;
+    font-size: 32px;
 }
 
 .h5 {
-    --size: 22px;
-    --weight: normal;
+    font-weight: 400;
+    font-size: 32px;
 }
