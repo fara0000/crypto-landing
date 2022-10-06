@@ -1,0 +1,34 @@
+.typography {
+    font-family: 'NeoGram', serif;
+    --lineHeight: 1.25;
+    --color: inherit;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--color);
+    font-weight: 400;
+}
+
+.h1 {
+    --size: 78px;
+    --weight: bold;
+}
+
+.h2 {
+    --size: 36px;
+    --weight: medium;
+}
+
+.h3 {
+    --size: 22px;
+    --weight: normal;
+}
+
+.h4 {
+    --size: 22px;
+    --weight: normal;
+}
+
+.h5 {
+    --size: 22px;
+    --weight: normal;
+}
