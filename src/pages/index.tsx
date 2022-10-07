@@ -1,9 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import ArrowRightIcon from '../assets/svg/arrowRight.svg';
+import ArrowRightIcon from 'src/assets/svg/arrowRight.svg';
 import { Button } from 'src/components/Button/Button';
 import { Typography } from 'src/components/Typography/Typography';
+import { Input } from 'src/components/Input/Input';
 
 const Home: NextPage = () => (
     <React.Fragment>
@@ -21,6 +22,11 @@ const Home: NextPage = () => (
             </span>
             <ArrowRightIcon />
         </Button>
+
+        <Input
+            type='text'
+            labelText='surname'
+        />
 
         <Typography tag="h1">
             Hello h1

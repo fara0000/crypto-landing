@@ -1,0 +1,34 @@
+.wrapper {
+    position: relative;
+    max-width: 400px;
+    padding: 20px 0;
+
+}
+
+.input {
+    width: 100%;
+    color: var(--light-primary);
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: transparent;
+    border-bottom: 1px solid var(--light-primary);
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+    pointer-events: none;
+    color: var(--light-primary);
+    transform: translateY(30px);
+    transition: all 400ms ease-in-out;
+}
+
+.input:focus + .label {
+    transform: translateY(0);
+}
