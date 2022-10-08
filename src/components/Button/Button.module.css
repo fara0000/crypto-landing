@@ -14,22 +14,22 @@
 button.accent {
     width: var(--width);
     height: var(--height);
-    color: var(--dark-primary);
-    background-color: var(--accent);
+    color: var(--color-dark-primary);
+    background-color: var(--color-accent);
 }
 
 button.white {
     width: var(--width);
     height: var(--height);
-    color: var(--dark-primary);
-    background-color: var(--light-primary);
+    color: var(--color-dark-primary);
+    background-color: var(--color-light-primary);
 }
 
 button.black {
     width: var(--width);
     height: var(--height);
-    color: var(--light-primary);
-    background-color: var(--dark-primary);
+    color: var(--color-light-primary);
+    background-color: var(--color-dark-primary);
 }
 
 .s {
@@ -41,14 +41,14 @@ button.black {
     flex-grow: 0;
     font-size: 18px;
     font-weight: 400;
-    line-height: 140%;
+    line-height: 23px;
 }
 
 .l {
     --width: 1297px;
-    --height: 119.67px;
+    --height: 120px;
     order: 0;
-    gap: 32.58px;
+    gap: 33px;
     padding: 36px 65px;
     flex-grow: 0;
     font-weight: 900;

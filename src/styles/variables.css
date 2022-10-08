@@ -1,6 +1,6 @@
 :root {
-    --accent: #05EBFF;
-    --dark-primary: #000;
-    --light-primary: #FFF;
-    --error: #FF7D7D;
+    --color-accent: #05EBFF;
+    --color-dark-primary: #000;
+    --color-light-primary: #FFF;
+    --color-error: #FF7D7D;
 }

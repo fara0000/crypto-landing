@@ -2,8 +2,8 @@
     --color: inherit;
     margin: 0;
     font-size: 18px;
-    font-family: 'NeoGram', serif;
-    line-height: 140%;
+    font-family: 'NeoGram', sans-serif;
+    line-height: 23px;
     color: var(--color);
     font-weight: 400;
 }
@@ -11,13 +11,13 @@
 .h1 {
     font-weight: 900;
     font-size: 125px;
-    line-height: 91%;
+    line-height: 15px;
 }
 
 .h2 {
     font-weight: 900;
     font-size: 100px;
-    line-height: 91%;
+    line-height: 15px;
 }
 
 .h3 {

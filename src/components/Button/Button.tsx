@@ -1,11 +1,13 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './Button.module.css';
-import * as types from './types';
+
+export type ButtonTheme = 'accent' | 'white' | 'black';
+export type ButtonSize = 's' | 'l';
 
 export type ButtonProps = {
-    size?: types.ButtonSize;
-    theme?: types.ButtonTheme;
+    size?: ButtonSize;
+    theme?: ButtonTheme;
     rounded?: boolean;
     onClick?: () => void;
     disabled?: boolean;
@@ -16,12 +18,12 @@ export type ButtonProps = {
 
 /**
  * @param {ButtonSize} [props.size]
- * * sm - 20px x 45px
- * * md - 20px x 62px
- * * lg - 28px x 96px
- * @param {ButtonVariant} [props.variant]
- * * filled
- * * outlined
+ * * sm - 309px x 57px
+ * * lg - 1297px x 120px
+ * @param {ButtonTheme} [props.theme]
+ * * accent
+ * * white
+ * * black
  * @param {boolean} [props.rounded] - set rounded borders
  * @returns
  */
