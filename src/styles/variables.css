@@ -1,6 +1,12 @@
 :root {
+    /* Colors */
     --color-accent: #05EBFF;
     --color-dark-primary: #000;
     --color-light-primary: #FFF;
     --color-error: #FF7D7D;
+
+
+    /* Layout values */
+    --max-width-mobile: 320px;
+    --max-width-desktop: 1440px;
 }
