@@ -1,0 +1,10 @@
+.mainWrapper {
+    background: var(--color-dark-primary);
+}
+
+
+.bigLogoImageWrapper {
+    position: absolute;
+    top: 99px;
+    right: -13%
+}

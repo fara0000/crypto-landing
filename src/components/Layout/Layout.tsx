@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './PageLayout.module.css';
+import styles from './Layout.module.css';
+import { Header } from 'src/components/Header/Header';
 
 type ColumnProps = {
     columnClassName?: string;
@@ -30,7 +31,7 @@ export const HeaderPageLayout: React.FC<HeaderPageLayoutProps> = ({
     children,
 }) => (
     <div className={clsx(styles.wrapper, mainWrapperClassName)}>
-        {/* тут будет HEADER */}
+        <Header />
 
         <div className={clsx(styles.contentWrapper, contentWrapperClassName)}>
             {children}
