@@ -2,16 +2,24 @@ import React from 'react';
 import styles from './Burger.module.css';
 import Logo from 'src/assets/svg/mobileLogo.svg';
 import CloseIcon from 'src/assets/svg/mobileCloseIcon.svg';
+import RightArrowIcon from 'src/assets/svg/arrowRight.svg';
 import { Typography } from 'src/components/Typography/Typography';
 import Link from 'next/link';
+import SnowTextIcon from 'src/assets/svg/SNØW.svg';
 import { Routes } from 'src/config/routes';
+import { Button } from 'src/components/Button/Button';
+import Telegram from 'src/assets/svg/telegram.svg';
 
 export const Burger = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.headerWrapper}>
-                <Logo />
-                <CloseIcon />
+                <div className={styles.logoWrapper}>
+                    <Logo />
+                </div>
+                <div className={styles.closeWrapper}>
+                    <CloseIcon />
+                </div>
             </div>
             <div className={styles.mainBody}>
                 <Link href={Routes.About}>
@@ -49,8 +57,27 @@ export const Burger = () => {
                         </Typography>
                     </a>
                 </Link>
+                <Button
+                    size="s"
+                    theme="white"
+                    buttonType="filled"
+                    className={styles.button}
+                >
+                    <Typography tag='p' styles={{ color: '#000'}}>
+                        Send your application
+                    </Typography>
+                    <RightArrowIcon stroke={'#000'} />
+                </Button>
             </div>
-            {/*<div className={styles.footer}></div>*/}
+            <div className={styles.footer}>
+                <div className={styles.telegramWrapper}>
+                    <Telegram height={'19px'} width={'21px'}/>
+                </div>
+                <SnowTextIcon />
+                {/*<Typography tag='h2' className={styles.logoName}>*/}
+                {/*    SNØW*/}
+                {/*</Typography>*/}
+            </div>
         </div>
     )
 }

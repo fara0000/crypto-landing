@@ -2,10 +2,12 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './Button.module.css';
 
-export type ButtonTheme = 'accent' | 'white' | 'black';
-export type ButtonSize = 's' | 'l';
+type ButtonType = 'filled' | 'outlined';
+type ButtonSize = 's' | 'l';
+type ButtonTheme = 'accent' | 'white' | 'black';
 
-export type ButtonProps = {
+type ButtonProps = {
+    buttonType?: 'filled' | 'outlined';
     size?: ButtonSize;
     theme?: ButtonTheme;
     rounded?: boolean;
@@ -24,10 +26,14 @@ export type ButtonProps = {
  * * accent
  * * white
  * * black
+ * * @param {ButtonType} [props.buttonType]
+ * * filled
+ * * outlined
  * @param {boolean} [props.rounded] - set rounded borders
  * @returns
  */
 export const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
+    buttonType = 'outlined',
     size = 'm',
     theme= 'accent',
     onClick = () => {},
@@ -46,6 +52,7 @@ export const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
                 styles.button,
                 styles[theme],
                 styles[size],
+                styles[buttonType],
                 className,
                 {
                     [styles.rounded]: rounded,

@@ -1,26 +1,116 @@
 import styles from './LandingMain.module.css';
+import MediaQuery, { useMediaQuery } from 'react-responsive';
 import Image from 'next/image';
 import logo from 'src/assets/png/megaBigLogo.png';
+import logoMobile from 'src/assets/png/logoMobileTop.png';
+import SendApplicationImage from 'src/assets/png/sendApplicationImage.png';
+import SendApplicationMobImage from 'src/assets/png/sendApplicationMobImage.png';
 import { ColumnHeaderPageLayout } from 'src/components/Layout/Layout';
 import { Burger } from 'src/components/Burger/Burger';
+import { Typography } from 'src/components/Typography/Typography';
 
 export const LandingMain = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 320px)' });
+
+    console.log(isMobile)
+
     return (
         <ColumnHeaderPageLayout mainWrapperClassName={styles.mainWrapper}>
-            <div>
-                hello
+            {/*<Burger />*/}
+            <div className={styles.firstBlock}>
+                <div className={styles.textInfoWrapper}>
+                    <div className={styles.bigTextWrapper}>
+                        <Typography tag={isMobile ? "h4" : "h2"} className={styles.typography}>
+                            Premium
+                        </Typography>
+                        <Typography tag={isMobile ? "h4" : "h2"} className={styles.typography}>
+                            Blockchain
+                        </Typography>
+                        <Typography tag={isMobile ? "h4" : "h2"} className={styles.typography}>
+                            Development
+                        </Typography>
+                    </div>
+                    <div className={styles.aboutText}>
+                        <div className={styles.aboutTextFirstPart}>
+                            {!isMobile &&
+                                <div className={styles.figureWrapper}>
+                                    <div className={styles.miniCircle} />
+                                    <div className={styles.line} />
+                                </div>
+                            }
+
+                            <p className={styles.textTransform}>
+                                We help
+                                <span className={styles.colorfulText}> start-ups </span>
+                                and <br/>
+                                established companies
+                            </p>
+                        </div>
+                        <div className={styles.aboutTextSecondPart}>
+                            <p className={styles.textTransform}>
+                                create and launch <span className={styles.colorfulText}> high-end web3 </span> <br/>
+                                products of <span className={styles.colorfulText}> any complexity</span>. From <br/>
+                                product concept to implementation and <br/>
+                                ongoing <span className={styles.colorfulText}> support</span>.
+                            </p>
+                        </div>
+                    </div>
+                    {!isMobile &&
+                        <div className={styles.mouseWrapper}>
+                            <div className={styles.mouseScroll}>
+                                <div>
+                                    <div className={styles.mouseLine} />
+                                </div>
+                            </div>
+                            <Typography tag="span">
+                                scroll
+                            </Typography>
+                        </div>
+                    }
+                    {isMobile &&
+                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
+                            <Image
+                                src={SendApplicationMobImage.src}
+                                width={191}
+                                height={191}
+                                alt="image is loading..."
+                                // blurDataURL={logo.src}
+                            />
+                        </div>
+                    }
+                </div>
+
+                    <div className={styles.bigLogoImageWrapper}>
+                        {!isMobile ?
+                            <Image
+                                src={logo.src}
+                                width={798}
+                                height={713}
+                                alt="big logo is loading..."
+                                // blurDataURL={logo.src}
+                            /> :
+                            <Image
+                                src={logoMobile.src}
+                                width={280}
+                                height={251}
+                                alt="big logo is loading..."
+                                // blurDataURL={logo.src}
+                            />
+                        }
+                    </div>
+                {!isMobile &&
+                    <div className={styles.sendApplicationImageWrapper}>
+                        <Image
+                        className={styles.sendApplicationImage}
+                        src={SendApplicationImage.src}
+                        width={268}
+                        height={268}
+                        alt="big logo is loading..."
+                        // blurDataURL={logo.src}
+                        />
+                    </div>
+                }
             </div>
-            <Burger />
-            {/*<div className={styles.bigLogoImageWrapper}>*/}
-            {/*    <Image*/}
-            {/*        className={styles.bigLogoImage}*/}
-            {/*        src={logo.src}*/}
-            {/*        width={798}*/}
-            {/*        height={713}*/}
-            {/*        alt="big logo is loading..."*/}
-            {/*        // blurDataURL={logo.src}*/}
-            {/*    />*/}
-            {/*</div>*/}
         </ColumnHeaderPageLayout>
     )
 }
