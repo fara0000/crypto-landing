@@ -120,6 +120,38 @@
     border-radius: 30px;
 }
 
+.secondBlock {
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+    width: 100%;
+    padding-right: 80px;
+    height: auto;
+    background-color: var(--color-dark-primary);
+}
+
+.staticContainer {
+    display: flex;
+    /*gap: 106px;*/
+    /*gap: 45px;*/
+    flex-direction: column;
+}
+
+.numbers {
+    color: var(--color-light-primary) !important;
+    /*height: 114px;*/
+    line-height: 114px !important;
+    margin-bottom: 50px !important;
+}
+
+.numbersText {
+    color: var(--color-light-primary);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 40px;
+}
+
 @media screen and (max-width: 322px)  {
     .bigLogoImageWrapper {
         position: absolute;
