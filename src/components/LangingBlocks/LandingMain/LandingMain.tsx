@@ -3,6 +3,7 @@ import MediaQuery, { useMediaQuery } from 'react-responsive';
 import Image from 'next/image';
 import logo from 'src/assets/png/megaBigLogo.png';
 import logoMobile from 'src/assets/png/logoMobileTop.png';
+import BlockChainTextImage from 'src/assets/png/blockchainText.png';
 import SendApplicationImage from 'src/assets/png/sendApplicationImage.png';
 import SendApplicationMobImage from 'src/assets/png/sendApplicationMobImage.png';
 import { ColumnHeaderPageLayout } from 'src/components/Layout/Layout';
@@ -11,8 +12,6 @@ import { Typography } from 'src/components/Typography/Typography';
 
 export const LandingMain = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
-
-    console.log(isMobile)
 
     return (
         <ColumnHeaderPageLayout mainWrapperClassName={styles.mainWrapper}>
@@ -23,9 +22,18 @@ export const LandingMain = () => {
                         <Typography tag={isMobile ? "h4" : "h2"} className={styles.typography}>
                             Premium
                         </Typography>
-                        <Typography tag={isMobile ? "h4" : "h2"} className={styles.typography}>
-                            Blockchain
-                        </Typography>
+                        {!isMobile ?
+                            <Image
+                                src={BlockChainTextImage.src}
+                                width={600}
+                                height={91}
+                                alt="image is loading..."
+                                // blurDataURL={logo.src}
+                            /> :
+                            <Typography tag={isMobile ? "h4" : "h2"} className={styles.typography}>
+                                Blockchain
+                            </Typography>
+                        }
                         <Typography tag={isMobile ? "h4" : "h2"} className={styles.typography}>
                             Development
                         </Typography>

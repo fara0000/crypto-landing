@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
 
         useEffect(() => {
             document.body.style.overflow = isBurgerShown ? 'hidden' : 'unset';
-            document.body.style.overflowX = 'hidden';
+            // document.body.style.overflowX = 'hidden';
         }, [isBurgerShown]);
 
     return (

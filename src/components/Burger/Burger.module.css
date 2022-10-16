@@ -26,7 +26,6 @@
 
 .wrapper {
   background: var(--color-dark-primary);
-  width: 100%;
   max-width: 600px;
   display: flex;
   flex-direction: column;
