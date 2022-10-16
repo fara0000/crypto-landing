@@ -3,13 +3,17 @@
   max-width: 320px;
   display: flex;
   flex-direction: column;
-  padding-top: 14px;
+  overflow: auto;
+  height: 640px;
+  position: relative;
+  z-index: 1;
+  /*padding: 16px;*/
 }
 
 .headerWrapper {
   width: 100%;
-  padding: 0 16px 32px 0;
   display: flex;
+  padding: 9px 16px 16px 16px;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -23,6 +27,7 @@
 }
 
 .mainBody {
+  padding: 0 16px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -42,7 +47,7 @@
 }
 
 .button {
-  width: 288px !important;
+  width: 248px !important;
   padding: 16px !important;
 }
 
@@ -58,6 +63,7 @@
   justify-content: center;
   width: 68px;
   height: 68px;
+  margin-left: 16px;
   border-radius: 50%;
   cursor: pointer;
   border: 1px solid var(--color-light-primary);

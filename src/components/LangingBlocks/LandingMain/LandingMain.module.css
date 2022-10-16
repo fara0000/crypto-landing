@@ -1,5 +1,6 @@
 .mainWrapper {
-    background: var(--color-dark-primary);
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -129,6 +130,10 @@
         margin-top: 160px;
     }
 
+    .firstBlock {
+        height: auto;
+    }
+
     .bigTextWrapper {
         gap: 0;
     }
@@ -165,5 +170,32 @@
         font-size: 20px;
         line-height: 25px;
         color: var(--color-light-primary);
+    }
+
+    .secondBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        height: auto;
+        background-color: var(--color-dark-primary);
+    }
+
+    .staticContainer {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .numbers {
+        color: var(--color-light-primary) !important;
+        line-height: 40px !important;
+    }
+
+    .numbersText {
+        color: var(--color-light-primary);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
     }
 }

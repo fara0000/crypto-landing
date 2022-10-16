@@ -1,3 +1,15 @@
+.burgerMenuWrapper {
+    position: fixed;
+    height: 10000px;
+    width: 100vw;
+    background: black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 39;
+}
+
 .wrapper {
     width: 100%;
     display: flex;
@@ -12,6 +24,7 @@
     gap: 16px;
     cursor: pointer;
     align-items: center;
+    z-index: 41;
 }
 
 .logoName {
@@ -47,6 +60,7 @@
 
 .mobileBurgerIconWrapper {
     display: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 322px) {

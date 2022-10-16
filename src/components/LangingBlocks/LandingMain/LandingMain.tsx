@@ -111,6 +111,47 @@ export const LandingMain = () => {
                     </div>
                 }
             </div>
+            <div className={styles.secondBlock}>
+                <div className={styles.staticContainer}>
+                    <Typography tag={isMobile ? "h3": "h1"} className={styles.numbers}>
+                        320
+                    </Typography>
+                    <div className={styles.figureWrapper}>
+                        {!isMobile &&
+                            <div className={styles.miniCircle} style={{backgroundColor: '#05EBFF', border: "1px solid #05EBFF", marginRight: "10px"}} />
+                        }
+                        <div className={styles.line} style={isMobile ? {width: '100%'} : {width: '390px'}}/>
+                    </div>
+                    <span className={styles.numbersText}>
+                            of smart contracts
+                    </span>
+                </div>
+                <div className={styles.staticContainer} style={!isMobile ? { marginTop: '32px' } : {}}>
+                    <Typography tag={isMobile ? "h3": "h1"} className={styles.numbers}>
+                        92
+                    </Typography>
+                    <div className={styles.figureWrapper}>
+                        <div className={styles.line} style={isMobile ? {width: '100%'} : {width: '400px'}} />
+                    </div>
+                    <span className={styles.numbersText}>
+                            completed projects
+                    </span>
+                </div>
+                <div className={styles.staticContainer} style={!isMobile ? { marginTop: '81px' } : {}}>
+                    <Typography tag={isMobile ? "h3": "h1"} className={styles.numbers}>
+                        21
+                    </Typography>
+                    <div className={styles.figureWrapper}>
+                        <div className={styles.line} style={isMobile ? {width: '100%'} : {width: '378px'}} />
+                        {!isMobile &&
+                            <div className={styles.miniCircle} style={{backgroundColor: '#05EBFF', border: "1px solid #05EBFF", marginLeft: "10px"}}/>
+                        }
+                    </div>
+                    <span className={styles.numbersText}>
+                            employees
+                    </span>
+                </div>
+            </div>
         </ColumnHeaderPageLayout>
     )
 }
