@@ -3,7 +3,6 @@
     flex-direction: column;
 }
 
-
 .bigLogoImageWrapper {
     position: absolute;
     top: 99px;
@@ -152,7 +151,7 @@
     margin-top: 40px;
 }
 
-@media screen and (max-width: 322px)  {
+@media screen and (max-width: 600px) {
     .bigLogoImageWrapper {
         position: absolute;
         top: 0;
@@ -205,15 +204,17 @@
     }
 
     .secondBlock {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 30px;
-        width: 100%;
         height: auto;
         background-color: var(--color-dark-primary);
+        padding-right: 0;
     }
 
     .staticContainer {
+        width: 100%;
         display: flex;
         gap: 10px;
         flex-direction: column;
@@ -222,6 +223,7 @@
     .numbers {
         color: var(--color-light-primary) !important;
         line-height: 40px !important;
+        margin-bottom: 0 !important;
     }
 
     .numbersText {
@@ -229,5 +231,6 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 20px;
+        margin-top: 0;
     }
 }

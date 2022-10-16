@@ -63,7 +63,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 322px) {
+@media screen and (max-width: 600px) {
     .wrapper {
         background: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(15px);

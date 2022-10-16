@@ -10,7 +10,7 @@ import { Burger } from 'src/components/Burger/Burger';
 import { Typography } from 'src/components/Typography/Typography';
 
 export const LandingMain = () => {
-    const isMobile = useMediaQuery({ query: '(max-width: 320px)' });
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
 
     console.log(isMobile)
 
