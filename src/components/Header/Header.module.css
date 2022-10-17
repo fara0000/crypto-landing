@@ -7,12 +7,14 @@
     bottom: 0;
     left: 0;
     right: 0;
+    overflow-y: scroll;
     z-index: 39;
 }
 
 .wrapper {
     width: 90%;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     padding: 27px 88px 24px 36px;

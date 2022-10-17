@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import styles from './Header.module.css';
 import Link from 'next/link';
 import Logo from 'src/assets/svg/logoSmall.svg';
 import MobileMenuIcon from 'src/assets/svg/mobileBurgerIcon.svg';
@@ -7,27 +6,31 @@ import Telegram from 'src/assets/svg/telegram.svg';
 import { Routes } from 'src/config/routes';
 import { Typography } from 'src/components/Typography/Typography';
 import { Burger } from 'src/components/Burger/Burger';
-import { Button } from 'src/components/Button/Button';
+import { useMediaQuery } from 'react-responsive';
+import styles from './Header.module.css';
 
 export const Header: React.FC = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
     const [isBurgerShown, setIsBurgerShown] = useState(false);
 
-        useEffect(() => {
-            document.body.style.overflow = isBurgerShown ? 'hidden' : 'unset';
-            // document.body.style.overflowX = 'hidden';
-        }, [isBurgerShown]);
+    useEffect(() => {
+        document.body.style.overflow = isBurgerShown ? 'hidden' : 'visible';
+    }, [isBurgerShown]);
 
     return (
-        <>
-            {!isBurgerShown &&
+        <div
+            style={
+                isMobile
+                    ? { overflow: 'auto', height: '100%', width: '100%' }
+                    : { width: '100%' }
+            }
+        >
+            {!isBurgerShown && (
                 <header className={styles.wrapper}>
                     <Link href={Routes.Landing}>
                         <div className={styles.logoWrapper}>
                             <Logo />
-                            <Typography
-                                tag='h3'
-                                className={styles.logoName}
-                            >
+                            <Typography tag="h3" className={styles.logoName}>
                                 SNØW
                             </Typography>
                         </div>
@@ -35,51 +38,42 @@ export const Header: React.FC = () => {
                     <div className={styles.linksWrapper}>
                         <Link href={Routes.About}>
                             <a className={styles.link}>
-                                <Typography tag='span'>
-                                    About Snow
-                                </Typography>
+                                <Typography tag="span">About Snow</Typography>
                             </a>
                         </Link>
                         <Link href={Routes.Services}>
                             <a className={styles.link}>
-                                <Typography tag='span'>
-                                    Services
-                                </Typography>
+                                <Typography tag="span">Services</Typography>
                             </a>
                         </Link>
                         <Link href={Routes.Library}>
                             <a className={styles.link}>
-                                <Typography tag='span'>
-                                    Library
-                                </Typography>
+                                <Typography tag="span">Library</Typography>
                             </a>
                         </Link>
                         <Link href={Routes.Team}>
                             <a className={styles.link}>
-                                <Typography tag='span'>
-                                    Team
-                                </Typography>
+                                <Typography tag="span">Team</Typography>
                             </a>
                         </Link>
                         <Link href={Routes.Contact}>
                             <a className={styles.link}>
-                                <Typography tag='span'>
-                                    Contact us
-                                </Typography>
+                                <Typography tag="span">Contact us</Typography>
                             </a>
                         </Link>
                         <div className={styles.telegramWrapper}>
                             <Telegram />
                         </div>
                     </div>
-                    <div className={styles.mobileBurgerIconWrapper} onClick={() => setIsBurgerShown(!isBurgerShown)}>
+                    <div
+                        className={styles.mobileBurgerIconWrapper}
+                        onClick={() => setIsBurgerShown(!isBurgerShown)}
+                    >
                         <MobileMenuIcon />
                     </div>
                 </header>
-            }
-            {isBurgerShown &&
-                <Burger setBurger={setIsBurgerShown} />
-            }
-        </>
-    )
-}
+            )}
+            {isBurgerShown && <Burger setBurger={setIsBurgerShown} />}
+        </div>
+    );
+};
