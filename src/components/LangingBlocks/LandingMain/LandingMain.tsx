@@ -15,7 +15,6 @@ export const LandingMain = () => {
 
     return (
         <ColumnHeaderPageLayout mainWrapperClassName={styles.mainWrapper}>
-            {/*<Burger />*/}
             <div className={styles.firstBlock}>
                 <div className={styles.textInfoWrapper}>
                     <div className={styles.bigTextWrapper}>
@@ -28,7 +27,6 @@ export const LandingMain = () => {
                                 width={600}
                                 height={91}
                                 alt="image is loading..."
-                                // blurDataURL={logo.src}
                             /> :
                             <Typography tag={isMobile ? "h4" : "h2"} className={styles.typography}>
                                 Blockchain
@@ -114,7 +112,6 @@ export const LandingMain = () => {
                         width={268}
                         height={268}
                         alt="big logo is loading..."
-                        // blurDataURL={logo.src}
                         />
                     </div>
                 }
