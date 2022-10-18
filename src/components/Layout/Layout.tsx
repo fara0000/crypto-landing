@@ -25,17 +25,15 @@ type HeaderPageLayoutProps = {
     children: React.ReactNode;
 };
 
-export const HeaderPageLayout: React.FC<HeaderPageLayoutProps> = ({
+export const HeaderPageLayout: React.FC<HeaderPageLayoutProps & ColumnProps> = ({
     mainWrapperClassName,
-    contentWrapperClassName,
     children,
+    ...columnProps
 }) => (
     <div className={clsx(styles.wrapper, mainWrapperClassName)}>
         <Header />
 
-        <div className={clsx(styles.contentWrapper, contentWrapperClassName)}>
-            {children}
-        </div>
+        <Column {...columnProps}>{children}</Column>
     </div>
 );
 

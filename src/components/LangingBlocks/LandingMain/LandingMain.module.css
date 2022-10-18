@@ -1,6 +1,7 @@
-.mainWrapper {
+.columnClassName {
     display: flex;
     flex-direction: column;
+    gap: 220px;
 }
 
 .bigLogoImageWrapper {
@@ -28,7 +29,6 @@
 }
 
 .textInfoWrapper {
-    color: var(--color-light-primary);
     display: flex;
     flex-direction: column;
     margin-top: 126px;
@@ -137,7 +137,6 @@
 }
 
 .numbers {
-    color: var(--color-light-primary) !important;
     /*height: 114px;*/
     line-height: 114px !important;
     margin-bottom: 50px !important;
@@ -155,6 +154,10 @@
     .bigLogoImageWrapper {
         position: absolute;
         top: 0;
+    }
+
+    .columnClassName {
+        gap: 60px;
     }
 
     .textInfoWrapper {
@@ -221,7 +224,6 @@
     }
 
     .numbers {
-        color: var(--color-light-primary) !important;
         line-height: 40px !important;
         margin-bottom: 0 !important;
     }

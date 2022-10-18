@@ -1,0 +1,32 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 260px;
+}
+
+.columnWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.textHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.heading {
+    line-height: 115px;
+}
+
+.aboutText {
+    text-align: center;
+    line-height: 34px;
+    font-size: 24px !important;
+}
+
+.mainServiceBlock {
+
+}
