@@ -5,7 +5,7 @@ import logoMobile from 'src/assets/png/logoMobileTop.png';
 import BlockChainTextImage from 'src/assets/png/blockchainText.png';
 import SendApplicationImage from 'src/assets/png/sendApplicationImage.png';
 import SendApplicationMobImage from 'src/assets/png/sendApplicationMobImage.png';
-import { ColumnHeaderPageLayout, HeaderPageLayout } from 'src/components/Layout/Layout';
+import { HeaderPageLayout } from 'src/components/Layout/Layout';
 import { Typography } from 'src/components/Typography/Typography';
 import styles from './LandingMain.module.css';
 

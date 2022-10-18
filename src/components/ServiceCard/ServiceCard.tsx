@@ -1,17 +1,14 @@
 import React, { ReactNode } from 'react';
-import styles from './ServiceCard.module.css';
 import RightArrow from 'src/assets/svg/arrowRight.svg';
 import { Typography } from 'src/components/Typography/Typography';
+import styles from './ServiceCard.module.css';
 
 type Props = {
     icon: ReactNode;
     title: string;
-}
+};
 
-export const ServiceCard: React.FC<Props> = ({
-    icon,
-    title
-}) => {
+export const ServiceCard: React.FC<Props> = ({ icon, title }) => {
     return (
         <div className={styles.cardWrapper}>
             {icon}
@@ -20,8 +17,8 @@ export const ServiceCard: React.FC<Props> = ({
             </Typography>
             <div className={styles.cardLinkWrapper}>
                 <span className={styles.linkText}>Learn more</span>
-                <RightArrow style={{ stroke: 'black'}} />
+                <RightArrow style={{ stroke: 'black' }} />
             </div>
         </div>
     );
-}
+};

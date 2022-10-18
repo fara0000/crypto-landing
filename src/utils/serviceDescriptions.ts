@@ -1,3 +1,1 @@
-export enum titles {
-
-}
+export enum Titles {}
