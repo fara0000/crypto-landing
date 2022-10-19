@@ -1,14 +1,11 @@
 import { ColumnFullHeightLayout } from 'src/components/Layout/Layout';
 import Image from 'next/image';
-import tenKNFTCollection from 'src/assets/png/services/10kNFTCollection.png';
 import { Typography } from 'src/components/Typography/Typography';
 import { ServiceCard } from 'src/components/ServiceCard/ServiceCard';
-import styles from './LandingService.module.css';
 import { ServiceMainInfo } from 'src/utils/serviceData';
+import styles from './LandingService.module.css';
 
 export const LandingService = () => {
-    const icon = <Image src={tenKNFTCollection.src} width={94} height={120} />;
-
     return (
         <ColumnFullHeightLayout
             wrapperMix={styles.mainWrapper}
@@ -28,8 +25,9 @@ export const LandingService = () => {
             </div>
             <div className={styles.mainServiceBlock}>
                 <div className={styles.cardBlock}>
-                    {ServiceMainInfo.slice(0, 4).map((item, index) => (
+                    {ServiceMainInfo.slice(0, 4).map((item) => (
                         <ServiceCard
+                            key={item.title}
                             icon={
                                 <Image
                                     src={item.icon}
@@ -45,8 +43,9 @@ export const LandingService = () => {
                     className={styles.cardBlock}
                     style={{ marginTop: '400px' }}
                 >
-                    {ServiceMainInfo.slice(4, 8).map((item, index) => (
+                    {ServiceMainInfo.slice(4, 8).map((item) => (
                         <ServiceCard
+                            key={item.title}
                             icon={
                                 <Image
                                     src={item.icon}
@@ -59,8 +58,9 @@ export const LandingService = () => {
                     ))}
                 </div>
                 <div className={styles.cardBlock}>
-                    {ServiceMainInfo.slice(8, 12).map((item, index) => (
+                    {ServiceMainInfo.slice(8, 12).map((item) => (
                         <ServiceCard
+                            key={item.title}
                             icon={
                                 <Image
                                     src={item.icon}
