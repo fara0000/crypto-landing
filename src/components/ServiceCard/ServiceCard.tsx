@@ -5,7 +5,7 @@ import styles from './ServiceCard.module.css';
 
 type Props = {
     icon: ReactNode;
-    title: string;
+    title: any;
 };
 
 export const ServiceCard: React.FC<Props> = ({ icon, title }) => {
