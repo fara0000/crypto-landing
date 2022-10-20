@@ -38,9 +38,44 @@
     justify-content: center;
 }
 
+.mainServiceBlockMob {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+    gap: 8px;
+}
+
 .cardBlock {
     display: flex;
     flex-direction: column;
     gap: 350px;
 }
 
+@media screen and (max-width: 600px){
+    .mainWrapper {
+        margin-top: 80px;
+    }
+
+    .columnWrapper {
+        gap: 20px;
+    }
+
+    .textHeader {
+        align-items: start;
+        gap: 18px;
+    }
+
+    .aboutText {
+        color: var(--color-light-primary);
+        text-align: start;
+        line-height: 19px;
+        font-size: 14px !important;
+    }
+
+    .heading {
+        font-weight: 800 !important;
+        font-size: 32px !important;
+        line-height: 45px !important;
+     }
+}

@@ -39,7 +39,7 @@
 
 @media screen and (max-width: 600px) {
     .cardWrapper {
-        width: 220px;
+        min-width: 220px;
         height: 296px;
         padding: 20px 10px 10px 10px;
     }
