@@ -36,7 +36,7 @@ type ButtonProps = {
  */
 export const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
     buttonType = 'outlined',
-    size = 'm',
+    size = 's',
     theme = 'accent',
     onClick = () => {},
     children,

@@ -11,10 +11,12 @@
         "test": "jest"
     },
     "dependencies": {
+        "@types/react-modal": "3.13.1",
         "clsx": "1.2.1",
         "next": "12.2.5",
         "react": "18.2.0",
         "react-dom": "18.2.0",
+        "react-modal": "3.16.1",
         "react-responsive": "9.0.0"
     },
     "jest": {
