@@ -5,12 +5,11 @@ import { Typography } from 'src/components/Typography/Typography';
 import { ServiceCard } from 'src/components/ServiceCard/ServiceCard';
 import { ServiceCardType, ServiceMainInfo } from 'src/utils/serviceData';
 import { useMediaQuery } from 'react-responsive';
-import styles from './LandingService.module.css';
-import RustIcon from 'src/assets/png/services/10kNFTCollection.png';
 import { ServiceModal } from 'src/components/ServiceCard/components/ServiceModal';
+import styles from './LandingService.module.css';
 
 export const LandingService = () => {
-    const [ clickCard, setClickedCard ] = useState<ServiceCardType>({
+    const [clickCard, setClickedCard] = useState<ServiceCardType>({
         title: '',
         icon: {
             src: '',
@@ -24,7 +23,7 @@ export const LandingService = () => {
 
     useEffect(() => {
         clickCard.title && setIsModalOpen(true);
-    }, [clickCard])
+    }, [clickCard]);
 
     return (
         <ColumnFullHeightLayout
@@ -125,11 +124,7 @@ export const LandingService = () => {
                 setIsOpen={setIsModalOpen}
                 title={clickCard.title}
                 icon={
-                    <Image
-                        src={clickCard.icon.src}
-                        width="110"
-                        height="120"
-                    />
+                    <Image src={clickCard.icon.src} width="110" height="120" />
                 }
                 description={clickCard.description}
             />

@@ -2,11 +2,11 @@ import React, { Dispatch, ReactNode, SetStateAction, useEffect } from 'react';
 import Modal from 'react-modal';
 import CloseModalIcon from 'src/assets/svg/closeModalIcon.svg';
 import ArrowRightIcon from 'src/assets/svg/arrowRight.svg';
-import styles from './ServiceModal.module.css';
 import { Typography } from 'src/components/Typography/Typography';
 import { Button } from 'src/components/Button/Button';
 import { useMediaQuery } from 'react-responsive';
 import { ServiceCardType } from 'src/utils/serviceData';
+import styles from './ServiceModal.module.css';
 
 const mobCustomStyles = {
     content: {
@@ -24,8 +24,8 @@ const mobCustomStyles = {
     },
     overlay: {
         backgroundColor: '#000',
-    }
-}
+    },
+};
 
 const customStyles = {
     content: {
@@ -49,17 +49,17 @@ const customStyles = {
         backgroundColor: '#000',
         opacity: 0.95,
         zIndex: 1,
-    }
-}
+    },
+};
 
 type ModalProps = {
-    setCard: Dispatch<SetStateAction<ServiceCardType>>
+    setCard: Dispatch<SetStateAction<ServiceCardType>>;
     setIsOpen: Dispatch<SetStateAction<boolean>>;
     isOpen: boolean;
     icon: ReactNode;
-    title: string
+    title: string;
     description: string;
-}
+};
 
 export const ServiceModal: React.FC<ModalProps> = ({
     isOpen,
@@ -72,7 +72,7 @@ export const ServiceModal: React.FC<ModalProps> = ({
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
     useEffect(() => {
         document.body.style.overflowY = isOpen ? 'hidden' : 'auto';
-    }, [isOpen])
+    }, [isOpen]);
 
     return (
         <Modal
@@ -80,14 +80,12 @@ export const ServiceModal: React.FC<ModalProps> = ({
             // preventScroll={isOpen}
             // onRequestClose={onRequestClose}
             style={!isMobile ? customStyles : mobCustomStyles}
-            shouldCloseOnOverlayClick={true}
-            shouldCloseOnEsc={true}
+            shouldCloseOnOverlayClick
+            shouldCloseOnEsc
             contentLabel="Service Modal"
         >
             <div className={styles.mainModalWrapper}>
-                <div className={styles.serviceIconWrapper}>
-                    {icon}
-                </div>
+                <div className={styles.serviceIconWrapper}>{icon}</div>
                 <div className={styles.serviceInfoWrapper}>
                     <Typography tag="h3" className={styles.title}>
                         {title}
@@ -95,15 +93,22 @@ export const ServiceModal: React.FC<ModalProps> = ({
                     <Typography tag="p" className={styles.description}>
                         {description}
                     </Typography>
-                    <Button size="s" theme="accent" className={styles.sendButton}>
+                    <Button
+                        size="s"
+                        theme="accent"
+                        className={styles.sendButton}
+                    >
                         Send your application
-                        <ArrowRightIcon style={{ width: '18px' }}/>
+                        <ArrowRightIcon style={{ width: '18px' }} />
                     </Button>
                 </div>
-                <div className={styles.closeIconWrapper} onClick={() => setIsOpen(false)}>
+                <div
+                    className={styles.closeIconWrapper}
+                    onClick={() => setIsOpen(false)}
+                >
                     <CloseModalIcon
                         onClick={() => {
-                            setIsOpen(false)
+                            setIsOpen(false);
                             setCard({
                                 title: '',
                                 icon: {
@@ -112,7 +117,7 @@ export const ServiceModal: React.FC<ModalProps> = ({
                                     width: 0,
                                 },
                                 description: '',
-                            })
+                            });
                         }}
                         className={styles.closeIcon}
                     />
@@ -120,4 +125,4 @@ export const ServiceModal: React.FC<ModalProps> = ({
             </div>
         </Modal>
     );
-}
+};

@@ -14,9 +14,9 @@ import { StaticImageData } from 'next/image';
 
 export type ServiceCardType = {
     title: string;
-    icon: StaticImageData,
+    icon: StaticImageData;
     description: string;
-}
+};
 
 export enum ServiceDescriptions {
     NFTСollection = 'We help you create your own 10K NFT collection just like CryptoPunks, from start to sale. Starting with the analysis and assessment of your needs and wishes, we will design your collection and write the program to generate your 10K NFTs. Afterwards, we will trim potential duplicates so that no single NFT is the same, giving each one of your buyers a unique piece to show off with.',
@@ -32,7 +32,6 @@ export enum ServiceDescriptions {
     Crowdsale = 'We will assist you in raising funds for your venture(s) by tokenising your assets through crowdsale contracts. With this approach, you can attract reputable investors from around the world, bringing you the funding and exposure for your projects. Get help with every single step of the process such as whitepaper creation, management and backend development.',
     DEX = 'Our proprietary DEX platform and app solutions are made to cultivate enterprise market value and enhance high-end securities. All you need to do is visualize your dreams, and our highly skilled and certified teams will develop them into a reality.',
 }
-
 
 export const ServiceMainInfo: Array<ServiceCardType> = [
     {

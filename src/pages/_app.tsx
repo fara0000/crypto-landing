@@ -7,5 +7,5 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
     <Component {...pageProps} />
 );
 /* eslint-enable react/jsx-props-no-spreading */
-Modal.setAppElement("#__next");
+Modal.setAppElement('#__next');
 export default MyApp;
