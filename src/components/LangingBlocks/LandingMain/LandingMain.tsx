@@ -5,7 +5,7 @@ import logoMobile from 'src/assets/png/logoMobileTop.png';
 import BlockChainTextImage from 'src/assets/png/blockchainText.png';
 import SendApplicationImage from 'src/assets/png/sendApplicationImage.png';
 import SendApplicationMobImage from 'src/assets/png/sendApplicationMobImage.png';
-import { ColumnHeaderPageLayout } from 'src/components/Layout/Layout';
+import { HeaderPageLayout } from 'src/components/Layout/Layout';
 import { Typography } from 'src/components/Typography/Typography';
 import styles from './LandingMain.module.css';
 
@@ -13,7 +13,7 @@ export const LandingMain = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
 
     return (
-        <ColumnHeaderPageLayout mainWrapperClassName={styles.mainWrapper}>
+        <HeaderPageLayout columnClassName={styles.columnClassName}>
             <div className={styles.firstBlock}>
                 <div className={styles.textInfoWrapper}>
                     <div className={styles.bigTextWrapper}>
@@ -82,9 +82,8 @@ export const LandingMain = () => {
                                 ongoing{' '}
                                 <span className={styles.colorfulText}>
                                     {' '}
-                                    support
+                                    support.
                                 </span>
-                                .
                             </p>
                         </div>
                     </div>
@@ -182,7 +181,7 @@ export const LandingMain = () => {
                 </div>
                 <div
                     className={styles.staticContainer}
-                    style={!isMobile ? { marginTop: '32px' } : {}}
+                    style={!isMobile ? { marginTop: '53px' } : {}}
                 >
                     <Typography
                         tag={isMobile ? 'h3' : 'h1'}
@@ -206,7 +205,7 @@ export const LandingMain = () => {
                 </div>
                 <div
                     className={styles.staticContainer}
-                    style={!isMobile ? { marginTop: '81px' } : {}}
+                    style={!isMobile ? { marginTop: '106px' } : {}}
                 >
                     <Typography
                         tag={isMobile ? 'h3' : 'h1'}
@@ -237,6 +236,6 @@ export const LandingMain = () => {
                     <span className={styles.numbersText}>employees</span>
                 </div>
             </div>
-        </ColumnHeaderPageLayout>
+        </HeaderPageLayout>
     );
 };

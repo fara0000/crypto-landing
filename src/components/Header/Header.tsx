@@ -6,24 +6,22 @@ import Telegram from 'src/assets/svg/telegram.svg';
 import { Routes } from 'src/config/routes';
 import { Typography } from 'src/components/Typography/Typography';
 import { Burger } from 'src/components/Burger/Burger';
-import { useMediaQuery } from 'react-responsive';
 import styles from './Header.module.css';
 
 export const Header: React.FC = () => {
-    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
     const [isBurgerShown, setIsBurgerShown] = useState(false);
 
     useEffect(() => {
-        document.body.style.overflow = isBurgerShown ? 'hidden' : 'visible';
+        document.body.style.overflowY = isBurgerShown ? 'hidden' : 'visible';
     }, [isBurgerShown]);
 
     return (
         <div
-            style={
-                isMobile
-                    ? { overflow: 'auto', height: '100%', width: '100%' }
-                    : { width: '100%' }
-            }
+        // style={
+        //     isMobile
+        //         ? { overflow: 'auto', height: '100%', width: '100%' }
+        //         : { width: '100%' }
+        // }
         >
             {!isBurgerShown && (
                 <header className={styles.wrapper}>
