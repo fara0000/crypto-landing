@@ -1,4 +1,5 @@
 .wrapper {
+    width: 113%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -14,11 +15,10 @@
 .column {
     padding: 0 88px;
     width: 100%;
-    margin: 0 auto;
     max-width: var(--max-width-desktop);
 }
 
-@media screen and (max-width: var(--max-width-mobile)) {
+@media screen and (max-width: 600px) {
     .column {
         padding: 0 16px;
         max-width: unset;

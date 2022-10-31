@@ -59,3 +59,8 @@ button.black {
 .rounded {
     --border-delimiter: 0.5;
 }
+
+button.filled {
+    color: var(--color-dark-primary);
+    background-color: var(--color-light-primary);
+}

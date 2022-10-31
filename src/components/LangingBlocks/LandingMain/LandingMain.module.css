@@ -1,0 +1,236 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.bigLogoImageWrapper {
+    position: absolute;
+    top: 99px;
+    right: -13%
+}
+
+.sendApplicationImageWrapper {
+    position: absolute;
+    right: 140px;
+    top: 830px;
+}
+
+.bigTextWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.firstBlock {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.textInfoWrapper {
+    color: var(--color-light-primary);
+    display: flex;
+    flex-direction: column;
+    margin-top: 126px;
+}
+
+.typography {
+    height: 78px;
+    display: flex;
+    align-items: center;
+}
+
+.aboutText {
+    display: flex;
+    margin-top: 145px;
+    flex-direction: column;
+}
+
+.aboutTextFirstPart {
+    display: flex;
+    align-items: baseline;
+    gap: 31px;
+    margin-bottom: 3px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 23px;
+    color: var(--color-light-primary);
+}
+
+.aboutTextSecondPart {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 23px;
+    color: var(--color-light-primary);
+}
+
+.colorfulText {
+    color: var(--color-accent);
+}
+
+.textTransform {
+    margin: 0;
+    line-height: 45px;
+}
+
+.figureWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.miniCircle {
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-light-primary);
+    border: 1px solid var(--color-light-primary);
+    border-radius: 50%;
+}
+
+.line {
+    height: 0;
+    width: 140px;
+    border: 1px solid var(--color-light-primary);
+    background-color: var(--color-light-primary);
+}
+
+.mouseWrapper {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-top: 100px;
+}
+
+.mouseScroll {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    color: var(--color-light-primary);
+    width: 35px;
+    height: 53px;
+    padding-top: 9px;
+    border-radius: 30px;
+    border: 2px solid var(--color-light-primary);
+}
+
+.mouseLine {
+    width: 0;
+    height: 12px;
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+}
+
+.secondBlock {
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+    width: 100%;
+    padding-right: 80px;
+    height: auto;
+    background-color: var(--color-dark-primary);
+}
+
+.staticContainer {
+    display: flex;
+    /*gap: 106px;*/
+    /*gap: 45px;*/
+    flex-direction: column;
+}
+
+.numbers {
+    color: var(--color-light-primary) !important;
+    /*height: 114px;*/
+    line-height: 114px !important;
+    margin-bottom: 50px !important;
+}
+
+.numbersText {
+    color: var(--color-light-primary);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+    .bigLogoImageWrapper {
+        position: absolute;
+        top: 0;
+    }
+
+    .textInfoWrapper {
+        margin-top: 160px;
+    }
+
+    .firstBlock {
+        height: auto;
+    }
+
+    .bigTextWrapper {
+        gap: 0;
+    }
+
+    .typography {
+        height: 45px;
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 45px;
+        display: flex;
+        align-items: center;
+    }
+
+    .aboutText {
+        display: flex;
+        margin-top: 15px;
+        flex-direction: column;
+    }
+
+    .aboutTextFirstPart {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        color: var(--color-light-primary);
+    }
+
+    .textTransform {
+        margin: 0;
+        line-height: normal;
+    }
+
+    .aboutTextSecondPart {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        color: var(--color-light-primary);
+    }
+
+    .secondBlock {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+        background-color: var(--color-dark-primary);
+        padding-right: 0;
+    }
+
+    .staticContainer {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .numbers {
+        color: var(--color-light-primary) !important;
+        line-height: 40px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .numbersText {
+        color: var(--color-light-primary);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 0;
+    }
+}

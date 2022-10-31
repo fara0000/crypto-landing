@@ -1,11 +1,15 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/require-default-props */
 import clsx from 'clsx';
 import React from 'react';
 import styles from './Button.module.css';
 
-export type ButtonTheme = 'accent' | 'white' | 'black';
-export type ButtonSize = 's' | 'l';
+type ButtonType = 'filled' | 'outlined';
+type ButtonSize = 's' | 'l';
+type ButtonTheme = 'accent' | 'white' | 'black';
 
-export type ButtonProps = {
+type ButtonProps = {
+    buttonType?: ButtonType;
     size?: ButtonSize;
     theme?: ButtonTheme;
     rounded?: boolean;
@@ -14,7 +18,7 @@ export type ButtonProps = {
 } & React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
-    >;
+>;
 
 /**
  * @param {ButtonSize} [props.size]
@@ -24,17 +28,21 @@ export type ButtonProps = {
  * * accent
  * * white
  * * black
+ * * @param {ButtonType} [props.buttonType]
+ * * filled
+ * * outlined
  * @param {boolean} [props.rounded] - set rounded borders
  * @returns
  */
 export const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
+    buttonType = 'outlined',
     size = 'm',
-    theme= 'accent',
+    theme = 'accent',
     onClick = () => {},
     children,
     rounded = true,
     className,
-    disabled= false,
+    disabled = false,
     ...props
 }) => {
     return (
@@ -46,6 +54,7 @@ export const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
                 styles.button,
                 styles[theme],
                 styles[size],
+                styles[buttonType],
                 className,
                 {
                     [styles.rounded]: rounded,

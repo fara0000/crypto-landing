@@ -20,7 +20,14 @@ export const Typography: React.FC<TypographyProps> = ({
     const TypographyTag = tag;
 
     return (
-        <TypographyTag className={clsx(className, typographyStyles.typography, typographyStyles[tag])} style={styles}>
+        <TypographyTag
+            className={clsx(
+                className,
+                typographyStyles.typography,
+                typographyStyles[tag],
+            )}
+            style={styles}
+        >
             {children}
         </TypographyTag>
     );

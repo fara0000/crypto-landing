@@ -1,0 +1,112 @@
+/*//ANIMATIONS stuff*/
+/*$hover: all, 0.2s, ease-in;*/
+/*$slide: all, 0.3s,  cubic-bezier(.55,0,.1,1);*/
+/*$slide-delay: all, 0.4s 0.1s,  cubic-bezier(.55,0,.1,1);*/
+/*$slide-slow: all, 0.5s,  cubic-bezier(.55,0,.1,1);*/
+/*$zoom: all, 1s,  cubic-bezier(.55,0,.1,1);*/
+/*$zoom-slow: all, 2.4s,  cubic-bezier(.55,0,.1,1);*/
+/*//MIXINS*/
+/*// ADDS A BROWSER PREFIX TO THE PROPERTY*/
+/*@mixin css3-prefix($property, $value) {*/
+/*  -webkit-#{$property}: #{$value};*/
+/*  -khtml-#{$property}: #{$value};*/
+/*  -moz-#{$property}: #{$value};*/
+/*  -ms-#{$property}: #{$value};*/
+/*  -o-#{$property}: #{$value};*/
+/*  #{$property}: #{$value};*/
+/*}*/
+/*// TRANSFORM*/
+/*@mixin transform($params) {*/
+/*  @include css3-prefix('transform', $params);*/
+/*}*/
+/*//FONT IMPORT*/
+/*@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);*/
+
+
+
+.wrapper {
+  background: var(--color-dark-primary);
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 640px;
+  position: relative;
+  z-index: 1;
+  animation: start 0.5s;
+  /*padding: 16px;*/
+}
+
+@keyframes start {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.headerWrapper {
+  width: 100%;
+  display: flex;
+  padding: 9px 16px 16px 16px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.closeWrapper {
+  cursor: pointer;
+}
+
+.logoWrapper {
+  cursor: pointer;
+}
+
+.mainBody {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.link {
+  cursor: pointer;
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--color-light-primary);
+}
+
+.typography {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.button {
+  width: 248px !important;
+  padding: 16px !important;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.telegramWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  margin-left: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--color-light-primary);
+  margin-top: 61px;
+}
+
+.logoName {
+  font-size: 79px !important;
+  color: var(--color-light-primary) !important;
+}
