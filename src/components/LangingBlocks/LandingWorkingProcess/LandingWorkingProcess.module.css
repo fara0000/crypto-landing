@@ -19,8 +19,8 @@
 
 .mainContentWrapper {
     display: grid;
-    row-gap: 30px;
-    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
     width: 100%;
 }
@@ -150,7 +150,6 @@
     }
 
     .button {
-        margin: 0 14px !important;
-        width: 288px !important;
+        width: 100% !important;
     }
 }

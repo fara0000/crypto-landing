@@ -41,7 +41,7 @@ export const LandingWorkingProcess = () => {
             </div>
 
             <div className={styles.mainContentWrapper}>
-                <div className={styles.numbersContainer}>
+                <div className={styles.numbersContainer} style={!isMobile ? { borderRight: "1px solid #FFF"} : {}}>
                     <div>
                         {isMobile ?
                             <FirstNumberMob /> :
@@ -74,7 +74,7 @@ export const LandingWorkingProcess = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.numbersContainer}>
+                <div className={styles.numbersContainer} style={!isMobile ? { borderRight: "1px solid #FFF", padding: '0 30px'} : {}}>
                     <div>
                         {isMobile ?
                             <SecondNumberMob /> :
@@ -93,7 +93,7 @@ export const LandingWorkingProcess = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.numbersContainer}>
+                <div className={styles.numbersContainer} style={!isMobile ? { padding: '0 30px'} : {}}>
                     <div>
                         {isMobile ?
                             <ThirdNumberMob /> :
@@ -102,7 +102,7 @@ export const LandingWorkingProcess = () => {
                     </div>
                     <div className={styles.numbersBody}>
                         <Typography tag="h3" className={styles.numbersTypography}>
-                            Smart <br /> Contract Development
+                            Smart <br /> Contract <br /> Development
                         </Typography>
                         <p className={styles.descWrapperText}>
                             Using the design as reference, <br/> we use industry-leading practices for <br/> writing smart contracts with a focus <br/> on simplicity, completeness and <br/> security.
@@ -125,7 +125,7 @@ export const LandingWorkingProcess = () => {
                         <RightArrowIcon />
                     </Button>
                 </div>}
-                <div className={styles.numbersContainer}>
+                <div className={styles.numbersContainer} style={!isMobile ? { borderRight: '1px solid #FFF', borderLeft: '1px solid #FFF', padding: '0 30px'} : {}}>
                     <div>
                         {isMobile ?
                             <FourthNumberMob /> :
@@ -147,7 +147,7 @@ export const LandingWorkingProcess = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.numbersContainer}>
+                <div className={styles.numbersContainer} style={!isMobile ? { padding: '0 30px'} : {}}>
                     <div>
                         {isMobile ?
                             <FifthNumberMob /> :
