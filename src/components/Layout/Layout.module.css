@@ -22,4 +22,8 @@
         padding: 0 16px;
         max-width: unset;
     }
+
+    .wrapper {
+        min-height: auto;
+    }
 }

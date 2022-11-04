@@ -1,0 +1,155 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 260px;
+    width: 100%;
+}
+
+.columnWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 100%;
+}
+
+.typography {
+    line-height: 114px;
+    letter-spacing: -0.04em;
+}
+
+.mainContentWrapper {
+    display: grid;
+    row-gap: 50px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    width: 100%;
+}
+
+.numbersContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+    align-items: start;
+}
+
+.numbersBody {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.numbersTypography {
+    line-height: 48px;
+}
+
+.firstDescWrapper {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+}
+
+.firstDescCircle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    border: 1px solid #FFFFFF;
+}
+
+.firstDescCircleWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.firstDescLine {
+    width: 0;
+    height: 58px;
+    opacity: 0.2;
+    border: 1px solid #FFFFFF;
+}
+
+.descWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+
+.descWrapperText {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    font-family: 'NeoGram', serif;
+    font-style: normal;
+    margin: 0;
+}
+
+.accentNumbers {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #05EBFF;
+}
+
+@media screen and (max-width: 600px) {
+    .mainWrapper {
+        margin-top: 80px;
+        min-height: auto;
+    }
+
+    .columnWrapper {
+        gap: 30px;
+    }
+
+    .typography {
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 45px;
+        color: #FFFFFF;
+        width: 100%;
+    }
+
+    .mainContentWrapper {
+        display: flex;
+        flex-direction: row;
+        overflow-y: scroll;
+    }
+
+    .accentNumbers {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .firstDescLine {
+        height: 30px;
+    }
+
+    .descWrapper {
+        gap: 20px;
+        margin-bottom: 4px;
+    }
+
+    .descWrapperText {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .numbersContainer {
+        padding-left: 30px;
+        padding-right: 50px;
+        border-right: 1px solid #FFFFFF;
+    }
+
+    div.mainContentWrapper > :first-child {
+        padding-left: 0 !important;
+    }
+
+    div.mainContentWrapper > :last-child {
+        border-right: none !important;
+    }
+
+    .button {
+        width: 100% !important;
+    }
+}

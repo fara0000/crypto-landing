@@ -11,6 +11,7 @@ import styles from './LandingMain.module.css';
 
 export const LandingMain = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+    const isTablet = useMediaQuery({ query: '(max-width: 1150px)' });
 
     return (
         <HeaderPageLayout columnClassName={styles.columnClassName}>
@@ -23,7 +24,7 @@ export const LandingMain = () => {
                         >
                             Premium
                         </Typography>
-                        {!isMobile ? (
+                        {!isMobile && !isTablet ? (
                             <Image
                                 src={BlockChainTextImage.src}
                                 width={600}
@@ -32,14 +33,14 @@ export const LandingMain = () => {
                             />
                         ) : (
                             <Typography
-                                tag={isMobile ? 'h4' : 'h2'}
+                                tag={isMobile || isTablet ? 'h4' : 'h2'}
                                 className={styles.typography}
                             >
                                 Blockchain
                             </Typography>
                         )}
                         <Typography
-                            tag={isMobile ? 'h4' : 'h2'}
+                            tag={isMobile || isTablet ? 'h4' : 'h2'}
                             className={styles.typography}
                         >
                             Development

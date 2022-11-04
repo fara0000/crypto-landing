@@ -75,7 +75,7 @@ export const Burger: React.FC<BurgerButtonProps> = ({ setBurger }) => {
                     <Typography tag="p" styles={{ color: '#000' }}>
                         Send your application
                     </Typography>
-                    <RightArrowIcon stroke="#000" />
+                    <RightArrowIcon />
                 </Button>
             </div>
             <div className={styles.footer}>

@@ -153,8 +153,8 @@
 @media screen and (max-width: 600px) {
     .bigLogoImageWrapper {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 0 !important;
+        right: 0 !important;
     }
 
     .columnClassName {
@@ -174,10 +174,10 @@
     }
 
     .typography {
-        height: 45px;
-        font-weight: 800;
-        font-size: 32px;
-        line-height: 45px;
+        height: 45px !important;
+        font-weight: 800 !important;
+        font-size: 32px !important;
+        line-height: 45px !important;
         display: flex;
         align-items: center;
     }
@@ -235,5 +235,34 @@
         font-size: 14px;
         line-height: 20px;
         margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .bigLogoImageWrapper {
+        right: -50%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .typography {
+        height: 50px;
+        font-weight: 800;
+        font-size: 58px;
+        line-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+
+    .bigLogoImageWrapper {
+
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .bigLogoImageWrapper {
+        position: absolute;
+        top: 99px;
+        right: -30%;
     }
 }
