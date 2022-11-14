@@ -1,0 +1,86 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 160px;
+}
+
+.columnWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 87px;
+    width: 100%;
+    padding: 0;
+}
+
+.titleWrapper {
+    width: 100%;
+}
+
+.title {
+    min-width: 100% !important;
+    width: 100% !important;
+}
+
+.imagesContainer {
+    /*width: 100%;*/
+    padding-left: 88px;
+    display: flex;
+    gap: 32px;
+}
+
+.imageTitle {
+    margin-top: 29px;
+}
+
+.imageDesc {
+    line-height: 25px !important;
+    margin-top: 7px;
+    width: 420px;
+}
+
+.image {
+    height: 650px !important;
+}
+.imageSmall {
+    height: 600px !important;
+    max-height: 600px !important;
+    min-height: 600px !important;
+}
+
+.swiper {
+    /*padding-left: 86px !import
+   ant;*/
+    /*width: calc(100% - 86px);*/
+    width: 90%;
+    /*width: calc(100% - 86px);*/
+    margin-left: 86px !important;
+    /*padding-right: 0 !important;*/
+}
+
+@media screen and (max-width: 600px) {
+    .mainWrapper {
+        margin-top: 80px;
+    }
+
+    .columnWrapper {
+        gap: 40px;
+    }
+
+    .imageTitle {
+        margin-top: 20px;
+    }
+    .imagesContainer {
+        overflow-x: scroll;
+        padding-left: 8px !important;
+    }
+
+    .imageDesc {
+        margin-top: 10px;
+        line-height: 20px !important;
+    }
+
+    .title {
+
+    }
+}

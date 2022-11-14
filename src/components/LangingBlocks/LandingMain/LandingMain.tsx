@@ -26,7 +26,7 @@ export const LandingMain = () => {
                         </Typography>
                         {!isMobile && !isTablet ? (
                             <Image
-                                src={BlockChainTextImage.src}
+                                src={BlockChainTextImage}
                                 width={600}
                                 height={91}
                                 alt="image is loading..."

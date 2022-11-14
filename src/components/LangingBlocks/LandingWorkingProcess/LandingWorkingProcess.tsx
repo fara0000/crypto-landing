@@ -47,7 +47,14 @@ export const LandingWorkingProcess = () => {
             <div className={styles.mainContentWrapper}>
                 <div
                     className={styles.numbersContainer}
-                    style={!isMobile ? { borderRight: '1px solid #FFF' } : {}}
+                    style={
+                        !isMobile
+                            ? {
+                                  borderRight: '1px solid #FFF',
+                                  paddingRight: '30px',
+                              }
+                            : {}
+                    }
                 >
                     <div>{isMobile ? <FirstNumberMob /> : <FirstNumber />}</div>
                     <div className={styles.numbersBody}>

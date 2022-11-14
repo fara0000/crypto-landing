@@ -40,3 +40,15 @@
     font-size: 32px;
     color: var(--color-light-primary);
 }
+
+@media screen and (max-width: 600px) {
+    .typography {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .h5 {
+        font-weight: 900;
+        font-size: 24px;
+    }
+}

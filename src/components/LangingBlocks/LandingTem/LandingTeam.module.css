@@ -1,0 +1,47 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 200px;
+}
+
+.columnWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 157px;
+    width: 100%;
+}
+
+.cardsContainer {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px){
+    .mainWrapper {
+        margin-top: 80px;
+    }
+
+    .columnWrapper {
+        gap: 97px;
+    }
+
+    .cardsContainer {
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .mainWrapper {
+        margin-top: 160px;
+    }
+
+    .columnWrapper {
+        gap: 20px;
+    }
+}
+
+/*.titleWrapper {*/
+/*    width: 100%;*/
+/*}*/
