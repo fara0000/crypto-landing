@@ -1,3 +1,4 @@
+import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { ColumnFullHeightLayout } from 'src/components/Layout/Layout';
 import Title from 'src/assets/png/teams/desc/title.png';
@@ -8,8 +9,8 @@ import TitleMob from 'src/assets/png/teams/mob/title.png';
 import TitleTablet from 'src/assets/png/teams/tablet/title.png';
 import Image from 'next/image';
 import { TeamCard } from 'src/components/TeamCard/TeamCard';
-import styles from './LandingTeam.module.css';
 import { BlockProps } from 'src/types';
+import styles from './LandingTeam.module.css';
 
 export const LandingTeam: React.FC<BlockProps> = ({ htmlId }) => {
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' });

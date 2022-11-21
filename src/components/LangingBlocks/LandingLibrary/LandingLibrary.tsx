@@ -1,3 +1,4 @@
+import React from 'react';
 import { ColumnFullHeightLayout } from 'src/components/Layout/Layout';
 import { Typography } from 'src/components/Typography/Typography';
 import Proof from 'src/assets/svg/library/desc/proof.svg';
@@ -10,14 +11,16 @@ import Defi from 'src/assets/svg/library/desc/defi.svg';
 import DefiMob from 'src/assets/svg/library/mob/defi.svg';
 import { useMediaQuery } from 'react-responsive';
 import { useRouter } from 'next/router';
+import { BlockProps } from 'src/types';
 import styles from './LandingLibrary.module.css';
 
-export const LandingLibrary = () => {
+export const LandingLibrary: React.FC<BlockProps> = ({ htmlId }) => {
     const router = useRouter();
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
 
     return (
         <ColumnFullHeightLayout
+            htmlId={htmlId}
             wrapperMix={styles.mainWrapper}
             columnClassName={styles.columnWrapper}
         >

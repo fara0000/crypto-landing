@@ -1,14 +1,15 @@
+import React, { useEffect, useState } from 'react';
 import { ColumnFullHeightLayout } from 'src/components/Layout/Layout';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { Typography } from 'src/components/Typography/Typography';
 import { ServiceCard } from 'src/components/ServiceCard/ServiceCard';
 import { ServiceCardType, ServiceMainInfo } from 'src/utils/serviceData';
 import { useMediaQuery } from 'react-responsive';
 import { ServiceModal } from 'src/components/ServiceCard/components/ServiceModal';
+import { BlockProps } from 'src/types';
 import styles from './LandingService.module.css';
 
-export const LandingService = () => {
+export const LandingService: React.FC<BlockProps> = ({ htmlId }) => {
     const [clickCard, setClickedCard] = useState<ServiceCardType>({
         title: '',
         icon: {
@@ -27,6 +28,7 @@ export const LandingService = () => {
 
     return (
         <ColumnFullHeightLayout
+            htmlId={htmlId}
             wrapperMix={styles.mainWrapper}
             columnClassName={styles.columnWrapper}
         >

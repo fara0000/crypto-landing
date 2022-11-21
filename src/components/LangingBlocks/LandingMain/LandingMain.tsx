@@ -1,3 +1,4 @@
+import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Image from 'next/image';
 import logo from 'src/assets/png/megaBigLogo.png';
@@ -7,14 +8,18 @@ import SendApplicationImage from 'src/assets/png/sendApplicationImage.png';
 import SendApplicationMobImage from 'src/assets/png/sendApplicationMobImage.png';
 import { HeaderPageLayout } from 'src/components/Layout/Layout';
 import { Typography } from 'src/components/Typography/Typography';
+import { BlockProps } from 'src/types';
 import styles from './LandingMain.module.css';
 
-export const LandingMain = () => {
+export const LandingMain: React.FC<BlockProps> = ({ htmlId }) => {
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
     const isTablet = useMediaQuery({ query: '(max-width: 1150px)' });
 
     return (
-        <HeaderPageLayout columnClassName={styles.columnClassName}>
+        <HeaderPageLayout
+            htmlId={htmlId}
+            columnClassName={styles.columnClassName}
+        >
             <div className={styles.firstBlock}>
                 <div className={styles.textInfoWrapper}>
                     <div className={styles.bigTextWrapper}>
