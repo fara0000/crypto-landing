@@ -15,6 +15,7 @@ type ButtonProps = {
     rounded?: boolean;
     onClick?: () => void;
     disabled?: boolean;
+    form?: string;
 } & React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
@@ -43,11 +44,13 @@ export const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
     rounded = true,
     className,
     disabled = false,
+    form,
     ...props
 }) => {
     return (
         <button
             type="button"
+            form={form}
             onClick={onClick}
             disabled={disabled}
             className={clsx(

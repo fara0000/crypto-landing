@@ -13,11 +13,15 @@
     "dependencies": {
         "@types/react-modal": "3.13.1",
         "clsx": "1.2.1",
+        "formik": "^2.2.9",
         "next": "12.2.5",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-modal": "3.16.1",
-        "react-responsive": "9.0.0"
+        "react-responsive": "9.0.0",
+        "react-toastify": "9.1.1",
+        "swiper": "8.4.4",
+        "yup": "0.32.11"
     },
     "jest": {
         "preset": "ts-jest",

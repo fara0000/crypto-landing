@@ -1,0 +1,135 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 260px;
+    width: 100%;
+    min-height: auto;
+}
+
+.columnWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.footer {
+    padding-left: 88px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.firstFooterBlock {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addressWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.tgContainer {
+    display: flex;
+    margin-top: 52px;
+    gap: 17px;
+    align-items: center;
+}
+
+.telegramWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid var(--color-light-primary);
+}
+
+.linkAndPrivacyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 31px;
+    padding-right: 55px;
+}
+
+.linksWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+.link {
+    cursor: pointer;
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--color-light-primary);
+}
+
+.secondFooterBlock {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.snowFooterContainer {
+    position: relative;
+    height: 100%;
+    width: auto;
+}
+
+.background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    .mainWrapper {
+        margin-top: 80px;
+    }
+
+    .linksWrapper {
+        display: none;
+    }
+
+    .footer {
+        padding-left: 18px;
+        gap: 30px;
+    }
+
+    .secondFooterBlock {
+        flex-direction: column;
+        gap: 30px;
+        align-items: start;
+        justify-content: start;
+    }
+
+    .firstFooterBlock {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .tgContainer {
+        margin-top: 60px;
+        gap: 17px;
+    }
+
+    .background {
+        display: none;
+    }
+
+    .linkAndPrivacyContainer {
+        margin-top: 30px;
+    }
+}

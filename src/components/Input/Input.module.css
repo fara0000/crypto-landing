@@ -32,3 +32,8 @@
 .input:focus + .label {
     transform: translateY(0);
 }
+
+.input:focus {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}

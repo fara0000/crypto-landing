@@ -14,6 +14,8 @@ import { Button } from 'src/components/Button/Button';
 import RightArrowIcon from 'src/assets/svg/arrowRight.svg';
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { Routes } from 'src/config/routes';
+import Link from 'next/link';
 import styles from './LandingWorkingProcess.module.css';
 
 export const LandingWorkingProcess = () => {
@@ -47,7 +49,14 @@ export const LandingWorkingProcess = () => {
             <div className={styles.mainContentWrapper}>
                 <div
                     className={styles.numbersContainer}
-                    style={!isMobile ? { borderRight: '1px solid #FFF' } : {}}
+                    style={
+                        !isMobile
+                            ? {
+                                  borderRight: '1px solid #FFF',
+                                  paddingRight: '30px',
+                              }
+                            : {}
+                    }
                 >
                     <div>{isMobile ? <FirstNumberMob /> : <FirstNumber />}</div>
                     <div className={styles.numbersBody}>
@@ -147,9 +156,19 @@ export const LandingWorkingProcess = () => {
                             buttonType="filled"
                             className={styles.button}
                         >
-                            <Typography tag="p" styles={{ color: '#000' }}>
-                                Send your application
-                            </Typography>
+                            <Link href={Routes.Contact}>
+                                <a
+                                    className={styles.link}
+                                    href={Routes.Contact}
+                                >
+                                    <Typography
+                                        tag="p"
+                                        styles={{ color: '#000' }}
+                                    >
+                                        Send your application
+                                    </Typography>
+                                </a>
+                            </Link>
                             <RightArrowIcon />
                         </Button>
                     </div>
@@ -215,9 +234,13 @@ export const LandingWorkingProcess = () => {
                         buttonType="filled"
                         className={styles.button}
                     >
-                        <Typography tag="p" styles={{ color: '#000' }}>
-                            Send your application
-                        </Typography>
+                        <Link href={Routes.Contact}>
+                            <a className={styles.link} href={Routes.Contact}>
+                                <Typography tag="p" styles={{ color: '#000' }}>
+                                    Send your application
+                                </Typography>
+                            </a>
+                        </Link>
                         <RightArrowIcon />
                     </Button>
                 </div>
