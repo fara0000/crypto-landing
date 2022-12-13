@@ -1,4 +1,4 @@
-# Coreblocks Frontend Template/Boilerplate
+# Frontend Template/Boilerplate
 
 This template is designed to ease the bootstrapping process of a new frontend project.
 
